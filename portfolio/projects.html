@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects – Sofia del Razo</title>
+  <link rel="stylesheet" href="https://use.typekit.net/qld2inn.css"> 
+  <link rel="stylesheet" href="styles2.css"> 
+  <script> 
+  (function(d) { var config = { kitId: 'qld2inn', scriptTimeout: 3000, async: true }, h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s) })(document); 
+  </script>
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+</head>
+
+<body>
+
+<nav class="round-navbar">
+  <a href="#section1" class="nav-item">001</a>
+  <a href="#section2" class="nav-item">002</a>
+  <a href="#section3" class="nav-item">003</a>
+  <a href="#section4" class="nav-item">004</a>
+  <a href="#section5" class="nav-item">005</a>
+</nav>
+
+<!-- Sección 001 -->
+<div class="section uno" id="section1">
+  <div class="cuo-fixed">
+    <h2 class="tit001">Project 001</h2>
+    <h1 class="cuo">Cúo</h1>
+    <model-viewer
+  src="cuomodel.glb"
+  alt="3dcuo" 
+  shadow-intensity="0.5"
+  auto-rotate
+  camera-controls
+  loading="eager"
+  class="modelolamp">
+</model-viewer>
+  </div>
+
+  <div class="scroll-content" id="scroll001">
+    <p class="des001">
+      Cúo started with one main objective: creating a paper lamp.<br><br>
+      During my research, I found a technique called "processed paper" and fell in love. Inspired by the work of 
+      <a href="https://www.piadesign.eu/" target="_blank" rel="noopener noreferrer">Pia Wistenberg</a>, 
+      I had to figure out the steps for this technique, since there was little to no information on how to make it.
+      <br><br>
+      My concept was <b>the end.</b> The processed 
+      paper technique shows a lot of layers, which I interpreted as everything that creates a life, <u>ending</u> in one last heartbeat, which I wanted to 
+      translate into the shape.<br><br> For the sketches, I mainly focused on the rhythm and the organicity.
+
+      </p>
+      
+      <div class="sketches-container">
+    <img src="lampsketches.png" class="lampsketches">
+    <img src="lampsketch.png" class="lampsketch">
+    <img src="trazo.svg" class="trazo" alt="trazo decorativo">
+      </div>
+
+      <p class="des002">
+      With recycled books and magazines —which I found poetic, since life is a set of stories—, I started doing <span class="hover-name">paper rolls</span> until they had enough thickness to be machined on the <span class="hover-name">lathe</span>. <br><br>
+      After trial and error,I finally got the final pieces to build the lamp.
+      <br><br>
+
+    <img src="lampfin.png" class="lampfin" alt="Cúo">
+      
+
+  </div>
+</div>
+
+<!-- Sección 002 -->
+<div class="section dos" id="section2">
+  <h2>Collaborations</h2>
+  <p>Proyectos en colaboración con otros artistas y diseñadores.</p>
+</div>
+
+<!-- Sección 003 -->
+<div class="section tres" id="section3">
+  <h2>Exhibitions</h2>
+  <p>Exposiciones pasadas y futuras donde se ha mostrado su trabajo.</p>
+</div>
+
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Scroll interno detectado
+  ScrollTrigger.create({
+    trigger: "#scroll001",
+    start: "bottom bottom",
+    end: "bottom bottom",
+    onLeave: () => {
+      document.querySelector("#section2").scrollIntoView({ behavior: "smooth" });
+    }
+  });
+</script>
+
+</body>
+</html>
+
+

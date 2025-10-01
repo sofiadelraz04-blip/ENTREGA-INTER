@@ -1,0 +1,195 @@
+.scroll-content {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.scroll-content::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "canora-frente", sans-serif;
+  font-style: normal;
+  color: #333;
+  background-color: #fbfaf5;
+  margin: 0;
+  padding: 0;
+}
+
+.section {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.cuo-fixed {
+  flex: 0 0 22vw;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  background-color: #fbfaf5;
+  z-index: 1;
+}
+
+.scroll-content {
+  flex: 1;
+  height: 100%;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  max-width: 70vw;
+  margin-left: 30px;
+}
+
+.tit001 {
+  font-family: "scatterplot-vf", sans-serif;
+  font-variation-settings: "RAND" 0, "wght" 200;
+  font-size: 50px;
+  margin-left: 38px;
+  margin-top: 50px;
+}
+
+.cuo {
+  font-family: "canora-frente", sans-serif;
+  font-size: 180px;
+  color: rgba(84, 107, 195, 0.9);
+  margin-top: -100px;
+  margin-left: 55px;
+}
+
+.modelolamp {
+  width: 10vw;
+  height: 60vh;
+  margin-left: 90px;
+  margin-top: -150px;
+}
+
+.des001 {
+  font-family: "scatterplot-vf", sans-serif;
+  font-variation-settings: "RAND" 0, "wght" 300;
+  font-size: 30px;
+  margin-bottom: 40px;
+  margin-top: 50px;
+  margin-right: 50px;
+}
+
+.des002 {
+  font-family: "scatterplot-vf", sans-serif;
+  font-variation-settings: "RAND" 0, "wght" 300;
+  font-size: 30px;
+  margin-bottom: 40px;
+  margin-top: 430px;
+  margin-right: 50px;
+}
+
+.sketches-container {
+  position: relative;
+  width: fit-content;
+}
+
+.lampsketches {
+  width: 600px;
+  margin-bottom: 40px;
+  margin-top: 10px;
+  margin-left: 70px;
+  z-index: 9;
+  position: absolute;
+  display: block;
+}
+
+.lampsketch {
+  width: 135px;
+  height: auto;
+  margin-top: 5px;
+  margin-bottom: 40px;
+  margin-left: 700px;
+  z-index: 9;
+  position: absolute;
+  display: block;
+}
+
+.trazo {
+  position: absolute;
+  left: 710px;
+  width: 79px;
+  height: auto;
+  pointer-events: none;
+  z-index: 100;
+  opacity: 0;
+  animation: fadeInStroke 1s ease forwards;
+  filter: drop-shadow(0 0 6px #20e119);
+}
+
+@keyframes fadeInStroke {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.hover-name {
+  position: relative;
+  cursor: pointer;
+  color: #333;
+  text-decoration: underline #20e119;
+}
+
+
+
+
+.round-navbar {
+  position: fixed;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 1000;
+}
+
+.nav-item {
+  width: 50px;
+  height: 50px;
+  background-color: #222;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-family: "scatterplot-vf", sans-serif;
+  font-variation-settings: "wght" 600, "RAND" 0.2;
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-item:hover {
+  transform: scale(1.2);
+  background-color: #20e119;
+}
+
+a {
+  font-family: "scatterplot-vf", sans-serif;
+  font-variation-settings: "wght" 200, "RAND" 0.2;
+  color: #20e119;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #0b7d3e;
+}
+
+
+
